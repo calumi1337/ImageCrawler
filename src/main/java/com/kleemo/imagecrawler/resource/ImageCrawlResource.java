@@ -78,7 +78,7 @@ public class ImageCrawlResource {
                 .map(this::saveImageToDisk)
                 .collect(Collectors.toList());
 
-        System.out.println("Request took: " + (System.currentTimeMillis() - startTime) + "ms");
+        System.out.println("Request has taken: " + (System.currentTimeMillis() - startTime) + "ms");
 
         return new ResponseEntity<>(downloadedImages, HttpStatus.CREATED);
     }
