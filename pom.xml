@@ -11,6 +11,12 @@
 	<name>imagecrawler</name>
 	<description>Demo project for Spring Boot</description>
 
+    <scm>
+		<url>https://github.com/calumi1337/ImageCrawler</url>
+		<connection>scm:git:git://github.com/calumi1337/ImageCrawler</connection>
+		<developerConnection>scm:git:git@github.com:calumi1337/ImageCrawler.git</developerConnection>
+	</scm>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
