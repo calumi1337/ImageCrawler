@@ -66,8 +66,7 @@ public class ImageCrawlResource {
 
         Document doc = Jsoup.connect(url).get();
         Elements imgElements = doc.select("img");
-        UrlValidator validator = new UrlValidator();
-        validator.isValid("test");
+        
         List<String> downloadedImages = imgElements.parallelStream()
                 .filter(this::elementIsBigEnough)
                 .map(element -> element.absUrl("src"))
@@ -79,6 +78,7 @@ public class ImageCrawlResource {
                 .collect(Collectors.toList());
 
         System.out.println("Request took: " + (System.currentTimeMillis() - startTime) + "ms");
+        System.out.println(String.format("Request took: %d ms", System.currentTimeMillis() - startTime));
 
         return new ResponseEntity<>(downloadedImages, HttpStatus.CREATED);
     }
