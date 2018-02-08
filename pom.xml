@@ -4,7 +4,7 @@
 
 	<groupId>com.kleemo</groupId>
 	<artifactId>imagecrawler</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>imagecrawler</name>
@@ -14,7 +14,7 @@
 		<url>https://github.com/calumi1337/ImageCrawler</url>
 		<connection>scm:git:git://github.com/calumi1337/ImageCrawler</connection>
 		<developerConnection>scm:git:git@github.com:calumi1337/ImageCrawler.git</developerConnection>
-	  <tag>imagecrawler-0.0.1</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<parent>
