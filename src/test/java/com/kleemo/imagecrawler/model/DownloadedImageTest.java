@@ -1,6 +1,7 @@
 package com.kleemo.imagecrawler.model;
 
-import com.kleemo.imagecrawler.resource.ImageCrawlResource;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,6 +20,11 @@ public class DownloadedImageTest {
 
         String imageName = cut.getImageName();
         Assert.assertEquals("220px-Brillanten.jpg", imageName);
+    }
+    
+    @Test
+    public void testWillFail() {
+    	assertTrue(false);
     }
 
 }
