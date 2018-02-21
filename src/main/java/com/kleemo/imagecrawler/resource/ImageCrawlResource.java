@@ -41,6 +41,7 @@ public class ImageCrawlResource {
         return new ResponseEntity<>("Test Successful", HttpStatus.OK);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/image/{imageName:.+}", method = RequestMethod.GET)
     public ResponseEntity<byte[]> getImageAsResponseEntity(@PathVariable String imageName) {
 
@@ -59,7 +60,8 @@ public class ImageCrawlResource {
         return new ResponseEntity<>(media, headers, HttpStatus.OK);
     }
 
-    @RequestMapping("/crawlUrl")
+    @CrossOrigin(origins = "http://localhost:4200")
+    @RequestMapping( value = "/crawlUrl", method = RequestMethod.POST)
     public ResponseEntity<List<String>> crawlImages(@RequestParam String url) throws IOException {
 
         long startTime = System.currentTimeMillis();
