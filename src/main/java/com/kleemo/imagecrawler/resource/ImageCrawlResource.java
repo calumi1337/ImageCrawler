@@ -61,7 +61,7 @@ public class ImageCrawlResource {
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @RequestMapping( value = "/crawlUrl", method = RequestMethod.POST)
+    @RequestMapping( value = "/crawlUrl")
     public ResponseEntity<List<String>> crawlImages(@RequestParam String url) throws IOException {
 
         long startTime = System.currentTimeMillis();
@@ -89,7 +89,7 @@ public class ImageCrawlResource {
             String imagePath = imagesDiskPath + image.getImageName();
 
             try {
-                ImageIO.write(image.getImage().get(), image.getFileType(), new File(imagePath));
+                ImageIO.write(image.getImage().get(), image.getFileType().get(), new File(imagePath));
             } catch (IOException e) {
                 e.printStackTrace();
             }
